@@ -31,5 +31,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add .
         git commit -m "Downloaded file on, $(date "+%Y/%m/%d")"
-       
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git
         git push
